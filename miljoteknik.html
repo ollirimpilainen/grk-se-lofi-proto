@@ -40,7 +40,7 @@ a{color:#3f4c55}a:hover{color:#252d32}
 .se-dia__cap{margin:24px 0 0;font-size:14px;line-height:20px;color:var(--ink-2-strong);text-align:center}
 .b-svcmap__pin--sub span{opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s}
 .b-svcmap__pin--sub:hover span,.b-svcmap__pin--sub:focus-visible span{opacity:1;transform:none}
-#miksi-grk .b-why__grid{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:40px}
+#miksi-grk .b-why__grid{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:40px} /* 4.11. Olli: kolme saraketta koko leveydelle kuten muilla SE-sivuilla, ei neljän sarakkeen ruudukkoa kolmelle sisällölle */
 .hf #miksi-grk .b-why__num{font-size:72px;line-height:1}
 #miksi-grk.b-why{position:relative;overflow:hidden}
 #miksi-grk>.vx-bg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
@@ -92,6 +92,13 @@ a{color:#3f4c55}a:hover{color:#252d32}
 .hf .hf-mx__t h3{font-size:22px;line-height:28px}
 .hf .hf-work__group{margin:0;padding:0 0 16px;border-bottom:2px solid var(--ink)}
 .hf .hf-work__group:not(:first-child){margin-top:96px}
+/* 3.11. Olli: toteutusmallit samalla lohkolla kuin grk.fi (tm-lyhyt, kopio Infra.dc.html:stä) */
+.tm-lyhyt{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;margin:0;padding:24px 0 0;list-style:none;border-top:2px solid var(--ink)}
+.tm-lyhyt h3{margin:0 0 8px;font:900 22px/28px var(--font-head)}
+.tm-lyhyt h3 a{color:var(--ink);text-decoration:none}
+.tm-lyhyt h3 a:hover{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:5px}
+.tm-lyhyt p{margin:0;font-size:16px;line-height:24px;color:var(--ink-2-strong)}
+#miksi-grk .b-why__grid{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:40px}
 @media (max-width:900px){
   .km-c{grid-template-columns:1fr!important;gap:32px!important}
   .b-why__grid,#miksi-grk .b-why__grid{grid-template-columns:1fr 1fr!important;row-gap:40px}
@@ -129,41 +136,43 @@ a{color:#3f4c55}a:hover{color:#252d32}
   <div class="hf-hero__text">
     <h1 class="b-h1">Miljöteknik: förorenad mark och massor</h1>
     <p class="b-lead">GRK Sverige tar hand om förorenad mark och massor som en del av projektet, så att schaktet och tidplanen håller.</p>
-    <div class="b-btns"><a class="b-btn" href="miljoteknik.html#yhteyshenkilot">Kontakta oss</a><a class="b-btn b-btn--secondary" href="#vaativat-kohteet">Se projekten</a></div>
+    <div class="b-btns"><a class="b-btn" href="miljoteknik.html#yhteyshenkilot">Kontakta oss</a><a class="b-btn b-btn--secondary" href="referenser.html">Se projekten</a></div>
     <ul class="b-facts"><li>En del av markentreprenaden</li><li>Ansvarig affärsområdeschef i Sverige</li><li>Kontor från Boden till Stockholm</li></ul>
   </div>
 </section>
-<section class="b-section" id="mita-teemme"><div class="b-inner">
+
+<section class="b-section b-why" id="miksi-grk"><div class="b-inner">
+  <div class="b-head" style="margin-bottom: 64px;"><h2 class="b-h2">Innan ni väljer entreprenör</h2><p class="b-body">Hela arbetet från en entreprenör, med folk nära bygget.</p></div>
+  <div class="b-why__grid">
+    <div class="b-why__col"><p class="b-why__num">1&nbsp;066,6</p><p class="b-why__label">M€ orderstock i koncernen 30.9.2026</p><h3 class="b-why__title">Koncernens styrka i ryggen</h3><p class="b-why__text">GRK är börsnoterat med öppen ekonomi. Hela koncernen står bakom leveransen, också i stora projekt.</p></div>
+    <div class="b-why__col"><p class="b-why__num">6</p><p class="b-why__label">kontor i Sverige, från Boden till Stockholm</p><h3 class="b-why__title">Nära ditt projekt</h3><p class="b-why__text">Egna maskiner och egen personal i norr och i Mälardalen.</p></div>
+    <div class="b-why__col"><p class="b-why__num">1&nbsp;573</p><p class="b-why__label">medarbetare i koncernen, i snitt 7-9/2026</p><h3 class="b-why__title">Folk som tar ansvar</h3><p class="b-why__text">Erfarna platschefer och yrkesfolk som fattar beslut på plats.</p></div>
+  </div>
+  <div class="b-why__certs"><span class="b-why__cert">ISO 9001 Kvalitet</span><span class="b-why__cert">ISO 14001 Miljö</span><span class="b-why__cert">ISO 45001 Arbetsmiljö</span></div>
+  <p class="b-linkrow"><a class="b-link" href="om-grk.html">Om GRK Sverige</a></p>
+</div></section>
+<section class="b-section" id="mita-teemme" style="padding-top:0"><div class="b-inner">
   <div class="b-head"><h2 class="b-h2">Vad vi gör</h2></div>
-  <div class="hf-mx">
-<h3 class="hf-work__group hf-mx__group">Mark och massor</h3>    <details class="hf-mx__i" id="fororenad-mark" open>
-      <summary><span class="hf-mx__ic" aria-hidden="true"><img src="assets/dd51e50adb92e6c47a388fc01518479b.svg" alt=""></span><span class="hf-mx__t"><h3>Förorenad mark</h3><p>Sanering av förorenad mark när området byggs.</p></span><i class="hf-mx__x" aria-hidden="true"></i></summary>
-      <div class="hf-mx__b"><article class="ve">
-        <div class="ve-top">
-          <div></div>
-          <aside class="pk-person" aria-label="Kontaktperson"><p class="pk-label">Fråga experten</p><div class="b-person"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Anneliina Kupiainen</p><p class="b-person__role">Affärsområdeschef, miljöteknologi</p></div></div><p class="pk-ch"><a class="pk-tel" href="tel:+46725843740"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+46 72 584 37 40</a><a href="mailto:anneliina.kupiainen@grksverige.se"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>anneliina.kupiainen@grksverige.se</a></p><a class="b-link b-link--sm" href="miljoteknik.html#yhteyshenkilot">Alla kontaktpersoner</a></aside>
-        </div>
-      </article></div>
+  <div class="hf-mx vg-mx">
+    <details class="hf-mx__i" open id="fororenad-mark">
+      <summary><span class="hf-mx__ic" aria-hidden="true"><img src="assets/dd51e50adb92e6c47a388fc01518479b.svg" alt=""></span><span class="hf-mx__t"><h3>Förorenad mark</h3><p>Vi schaktar, sorterar och tar hand om förorenad mark när området byggs, så att schaktet och tidplanen håller. Saneringen görs i samma entreprenad som markarbetena.</p></span><i class="hf-mx__x" aria-hidden="true"></i></summary>
+      <div class="hf-mx__b"><article class="vk">
+          <div><ul class="vk-facts"><li><b>Arbeten:</b> Schakt, sortering och omhändertagande av förorenad mark</li><li><b>Exempel:</b> Pajala tätortsupprustning och Luleå hamn</li></ul></div>
+          <div class="ura-ask vk-cta"><span class="vk-cta__q">Har ni ett projekt på gång?</span><span class="vk-cta__who" title="Anneliina Kupiainen, affärsområdeschef, miljöteknologi"><b>Anneliina Kupiainen</b>, affärsområdeschef, miljöteknologi</span><a href="tel:+46725843740"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+46 72 584 37 40</a><a href="mailto:anneliina.kupiainen@grksverige.se"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>anneliina.kupiainen@grksverige.se</a><a class="b-btn b-btn--sm vk-cta__btn" href="miljoteknik.html#yhteyshenkilot">Kontakta oss</a></div>
+        </article></div>
     </details>
-    <details class="hf-mx__i" id="massor" open>
-      <summary><span class="hf-mx__ic" aria-hidden="true"><img src="assets/34f5dfbd9e6aff74a01fca81b66ca615.svg" alt=""></span><span class="hf-mx__t"><h3>Massor och återvunna material</h3><p>Överskottsmassor och återvunna material i projektet.</p></span><i class="hf-mx__x" aria-hidden="true"></i></summary>
-      <div class="hf-mx__b"><article class="ve">
-        <div class="ve-top">
-          <div></div>
-          <aside class="pk-person" aria-label="Kontaktperson"><p class="pk-label">Fråga experten</p><div class="b-person"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Anneliina Kupiainen</p><p class="b-person__role">Affärsområdeschef, miljöteknologi</p></div></div><p class="pk-ch"><a class="pk-tel" href="tel:+46725843740"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+46 72 584 37 40</a><a href="mailto:anneliina.kupiainen@grksverige.se"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>anneliina.kupiainen@grksverige.se</a></p><a class="b-link b-link--sm" href="miljoteknik.html#yhteyshenkilot">Alla kontaktpersoner</a></aside>
-        </div>
-      </article></div>
+    <details class="hf-mx__i" open id="massor">
+      <summary><span class="hf-mx__ic" aria-hidden="true"><img src="assets/34f5dfbd9e6aff74a01fca81b66ca615.svg" alt=""></span><span class="hf-mx__t"><h3>Massor och återvunna material</h3><p>Vi planerar massorna innan schaktet börjar, så att överskottsmassor och återvunna material kan användas i projektet. Det minskar transporterna och behovet av nytt material.</p></span><i class="hf-mx__x" aria-hidden="true"></i></summary>
+      <div class="hf-mx__b"><article class="vk">
+          <div><ul class="vk-facts"><li><b>Arbeten:</b> Massbalans, överskottsmassor och återvunna material</li></ul></div>
+          <div class="ura-ask vk-cta"><span class="vk-cta__q">Har ni ett projekt på gång?</span><span class="vk-cta__who" title="Anneliina Kupiainen, affärsområdeschef, miljöteknologi"><b>Anneliina Kupiainen</b>, affärsområdeschef, miljöteknologi</span><a href="tel:+46725843740"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+46 72 584 37 40</a><a href="mailto:anneliina.kupiainen@grksverige.se"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>anneliina.kupiainen@grksverige.se</a><a class="b-btn b-btn--sm vk-cta__btn" href="miljoteknik.html#yhteyshenkilot">Kontakta oss</a></div>
+        </article></div>
     </details>
 </div>
 </div></section>
-<section class="b-section" id="vaativat-kohteet" style="padding-top:0"><div class="b-inner">
-  <div class="b-head"><h2 class="b-h2">Miljöprojekt vi har byggt</h2></div>
-  <p class="b-body"><span class="hf-sc__tbd" aria-label="Fylls i"></span></p>
-  <p style="margin-top: 32px;"><a class="b-link" href="referenser.html">Alla referenser</a></p>
-</div></section>
 <section class="b-section" id="nain-hanke-etenee"><div class="b-inner">
   <div class="b-head"><h2 class="b-h2">Så går projektet till</h2></div>
-  <ol class="b-steps"><li class="b-step"><h3>Ett samtal redan före projekteringen</h3><p>Berätta om projektet, så bedömer vi genomförbarhet, tidplan och alternativ.</p><p class="b-step__cta"><a class="b-link b-link--sm" href="miljoteknik.html#yhteyshenkilot">Ring en expert</a></p></li><li class="b-step"><h3>Anbud och entreprenadform</h3><p>Vi lämnar anbud och kommer överens om formen: samverkan, totalentreprenad eller utförandeentreprenad.</p><p class="b-step__cta"><a class="b-link b-link--sm" href="#toteutusmallit">Entreprenadformer</a></p></li><li class="b-step"><h3>Genomförande</h3><p>Egna maskiner och egen personal, och en ansvarig kontaktperson.</p><p class="b-step__cta"><a class="b-link b-link--sm" href="#vaativat-kohteet">Se projekten</a></p></li><li class="b-step"><h3>Överlämning och garanti</h3><p>Vi lämnar över med dokumentation och ansvarar för arbetet under garantitiden.</p></li></ol>
+  <ol class="b-steps"><li class="b-step"><h3>Ett samtal redan före projekteringen</h3><p>Berätta om projektet, så bedömer vi genomförbarhet, tidplan och alternativ.</p><p class="b-step__cta"><a class="b-link b-link--sm" href="miljoteknik.html#yhteyshenkilot">Ring en expert</a></p></li><li class="b-step"><h3>Anbud och entreprenadform</h3><p>Vi lämnar anbud och kommer överens om formen: samverkan, totalentreprenad eller utförandeentreprenad.</p><p class="b-step__cta"><a class="b-link b-link--sm" href="#toteutusmallit">Entreprenadformer</a></p></li><li class="b-step"><h3>Genomförande</h3><p>Egna maskiner och egen personal, och en ansvarig kontaktperson.</p><p class="b-step__cta"><a class="b-link b-link--sm" href="referenser.html">Se projekten</a></p></li><li class="b-step"><h3>Överlämning och garanti</h3><p>Vi lämnar över med dokumentation och ansvarar för arbetet under garantitiden.</p></li></ol>
 </div></section>
 <section class="b-section sy" id="suunnittelu"><div class="b-inner">
   <div class="sy-top">
@@ -188,25 +197,15 @@ a{color:#3f4c55}a:hover{color:#252d32}
   <ul class="tm-lyhyt"><li><h3><a href="samverkan.html">Samverkan</a></h3><p>Beställare, huvudentreprenör, projektör och GRK i ett team, med öppna kalkyler och en gemensam tidplan. Vi är med från planeringen.</p></li><li><h3><a href="samverkan.html">Totalentreprenad</a></h3><p>GRK projekterar och bygger marken, och ansvarar för helheten. Beställaren beskriver vad som ska uppnås.</p></li><li><h3><a href="samverkan.html">Utförandeentreprenad</a></h3><p>Beställaren låter projektera, och GRK bygger enligt handlingarna med ett kontrakt.</p></li><li><h3><a href="samverkan.html">Underentreprenad</a></h3><p>Du har kontraktet med beställaren. Vi tar mark, grund och el åt dig, med egna maskiner och egen personal.</p></li></ul>
   <p class="b-linkrow"><a class="b-link" href="samverkan.html">Samverkan och entreprenadformer</a></p>
 </div></section>
-<section class="b-section b-why" id="miksi-grk"><div class="b-inner">
-  <div class="b-head" style="margin-bottom: 64px;"><h2 class="b-h2">Stor koncern, namngiven expert</h2><p class="b-body">Hela arbetet från en entreprenör, med folk nära bygget.</p></div>
-  <div class="b-why__grid">
-    <div class="b-why__col"><p class="b-why__num">1&nbsp;170</p><p class="b-why__label">M€ orderstock i koncernen 30.6.2026</p><h3 class="b-why__title">Ingen startup</h3><p class="b-why__text">GRK är börsnoterat med öppen ekonomi. Storleken bär ansvaret för hela leveransen.</p></div>
-    <div class="b-why__col"><p class="b-why__num">6</p><p class="b-why__label">kontor i Sverige, från Boden till Stockholm</p><h3 class="b-why__title">Nära ditt projekt</h3><p class="b-why__text">Egna maskiner och egen personal i norr och i Mälardalen.</p></div>
-    <div class="b-why__col"><p class="b-why__num">1&nbsp;320</p><p class="b-why__label">medarbetare i koncernen, i snitt 4-6/2026</p><h3 class="b-why__title">Folk som tar ansvar</h3><p class="b-why__text">Erfarna platschefer och yrkesfolk som fattar beslut på plats.</p></div>
-  </div>
-  <div class="b-why__certs"><span class="b-why__cert">ISO 9001 Kvalitet</span><span class="b-why__cert">ISO 14001 Miljö</span><span class="b-why__cert">ISO 45001 Arbetsmiljö</span></div>
-  <p class="b-linkrow"><a class="b-link" href="om-grk.html">Om GRK Sverige</a></p>
-</div></section>
 
 
 <section class="b-section b-section--gray" id="toimialat"><div class="b-inner">
-  <div class="b-head"><h2 class="b-h2">Datacenter, energi eller industri?</h2><p class="b-body">Se helheten per bransch.</p></div>
-  <div class="t3 t3--3"><a class="t3__p" href="datacenter.html"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Datacenterbygge"><div class="t3__c"><h3>Datacenter</h3><p>Från tomt till elanslutning.</p></div></a><a class="t3__p" href="energi.html"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Energipark"><div class="t3__c"><h3>Energi och kraftnät</h3><p>Vind, sol, batterier och ställverk.</p></div></a><a class="t3__p" href="industri.html"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Industriområde med spår"><div class="t3__c"><h3>Industri</h3><p>Grön industri, industrispår och hamnar.</p></div></a></div>
+  <div class="b-head"><h2 class="b-h2">Industri, datacenter eller energi?</h2><p class="b-body">Så tar vi hand om massorna i hela projektet.</p></div>
+  <div class="t3 t3--3"><a class="t3__p" href="industri.html"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Industriområde med spår"><div class="t3__c"><h3>Industri</h3><p>Förorenad mark när området byggs om.</p></div></a><a class="t3__p" href="datacenter.html"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Datacenterbygge"><div class="t3__c"><h3>Datacenter</h3><p>Överskottsmassor när tomten schaktas.</p></div></a><a class="t3__p" href="energi.html"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Energipark"><div class="t3__c"><h3>Energi och kraftnät</h3><p>Massor och återvunna material i parken.</p></div></a></div>
 </div></section>
 <section class="b-section" id="usein-kysytyt"><div class="b-inner b-faq">
   <div class="b-head" style="margin: 0;"><h2 class="b-h2">Vanliga frågor om miljöteknik</h2></div>
-  <div><details class="b-acc" open><summary><span>Tar ni hand om förorenad mark i projektet?</span><i></i></summary><div class="b-acc__body">Ja. Miljötekniken är en del av markentreprenaden.</div></details><details class="b-acc" open><summary><span>Var arbetar ni?</span><i></i></summary><div class="b-acc__body">I Sverige, Finland och Estland. I Sverige har vi kontor i Boden, Skellefteå, Umeå, Härnösand, Gävle och Stockholm.</div></details></div>
+  <div><details class="b-acc"><summary><span>Tar ni hand om förorenad mark i projektet?</span><i></i></summary><div class="b-acc__body">Ja. Miljötekniken är en del av markentreprenaden.</div></details><details class="b-acc"><summary><span>Var arbetar ni?</span><i></i></summary><div class="b-acc__body">I Sverige, Finland och Estland. I Sverige har vi kontor i Boden, Skellefteå, Umeå, Härnösand, Gävle och Stockholm.</div></details></div>
 </div></section>
 <section class="b-section b-section--gray" id="yhteyshenkilot"><div class="b-inner">
   <div class="b-head"><h2 class="b-h2">Kontaktpersoner</h2><p class="b-body">Ring direkt. Hela projektet har en ansvarig kontaktperson.</p></div>
@@ -231,7 +230,7 @@ a{color:#3f4c55}a:hover{color:#252d32}
   <div class="tx">
     <h2 class="hf-h2">Jobba på GRK</h2>
     <p class="hf-lead">Här fattar du egna beslut, är med redan i anbudet och får välja vilka du vill jobba med. När teamet lyckas märks det, också för dig.</p>
-    <div class="acts acts--stack"><a class="b-btn b-btn--secondary" href="lediga-jobb.html">Lediga jobb</a><ul class="hf-linklist"><li><a href="jobba-pa-grk.html">Jobba på GRK</a></li><li><a href="jobba-pa-grk.html#kontakt">Prata med en rekryterare först</a></li></ul></div>
+    <div class="acts acts--stack"><a class="b-btn b-btn--secondary" href="jobba-pa-grk.html#jobb">Lediga jobb</a><ul class="hf-linklist"><li><a href="jobba-pa-grk.html">Jobba på GRK</a></li><li><a href="jobba-pa-grk.html#kontakt">Prata med en rekryterare först</a></li></ul></div>
   </div>
   <div class="ph"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="GRK:s asfaltsarbetare i beläggningsarbete"></div>
 </section>
@@ -245,16 +244,16 @@ a{color:#3f4c55}a:hover{color:#252d32}
     </div>
     <nav class="hf-foot__nav" aria-label="Sidfotsmeny">
       <div><h2 class="hf-foot__h"><a href="tjanster.html">Tjänster</a></h2><ul>
-        <li><a href="markarbeten.html">Markarbeten och anläggning</a></li><li><a href="grundlaggning.html">Grundläggning och grundförstärkning</a></li><li><a href="broar.html">Broar</a></li><li><a href="jarnvag.html">Järnväg</a></li><li><a href="jarnvag.html#industrispar">Industrispår</a></li><li><a href="miljoteknik.html">Miljöteknik</a></li><li><a href="samverkan.html">Samverkan</a></li>
+        <li><a href="markarbeten.html">Markarbeten och anläggning</a></li><li><a href="grundlaggning.html">Grundläggning och grundförstärkning</a></li><li><a href="broar.html">Broar</a></li><li><a href="jarnvag.html">Järnväg</a></li><li><a href="jarnvag.html#industrispar">Industrispår</a></li><li><a href="miljoteknik.html">Miljöteknik</a></li>
       </ul></div>
       <div><h2 class="hf-foot__h">Branscher</h2><ul>
         <li><a href="datacenter.html">Datacenter</a></li><li><a href="energi.html">Energi och kraftnät</a></li><li><a href="industri.html">Industri</a></li>
       </ul></div>
       <div><h2 class="hf-foot__h"><a href="om-grk.html">Om GRK</a></h2><ul>
-        <li><a href="om-grk.html">Om GRK Sverige</a></li><li><a href="om-grk.html#certifikat">Kvalitet, säkerhet och certifikat</a></li><li><a href="referenser.html">Referenser</a></li><li><a href="lediga-jobb.html">Karriär och lediga jobb</a></li><li><a class="hf-foot__ext" href="https://ollirimpilainen.github.io/grk-lofi-proto/">Koncernen</a></li><li><a class="hf-foot__ext" href="tyhja.html?s=Investerare">Investerare</a></li>
+        <li><a href="om-grk.html">Om GRK Sverige</a></li><li><a href="samverkan.html">Samverkan</a></li><li><a href="om-grk.html#certifikat">Kvalitet, säkerhet och certifikat</a></li><li><a href="referenser.html">Referenser</a></li><li><a href="jobba-pa-grk.html#jobb">Karriär och lediga jobb</a></li><li><a class="hf-foot__ext" href="https://ollirimpilainen.github.io/grk-lofi-proto/">Koncernen</a></li><li><a class="hf-foot__ext" href="tyhja.html?s=Investerare">Investerare</a></li>
       </ul></div>
       <div><h2 class="hf-foot__h"><a href="kontakta-oss.html">Kontakt</a></h2><ul>
-        <li><a href="kontaktpersoner.html">Kontaktpersoner</a></li><li><a href="norra-sverige.html">Norra Sverige</a></li><li><a href="tyhja.html?s=Stockholm%20och%20M%C3%A4lardalen">Stockholm och Mälardalen</a></li><li><a href="kontakta-oss.html#fakturering">Leverantörer och fakturering</a></li><li><a href="nyheter.html">Nyheter och media</a></li>
+        <li><a href="kontaktpersoner.html">Kontaktpersoner</a></li><li><a href="kontakta-oss.html#kontor">Kontor i Sverige</a></li><li><a href="kontakta-oss.html#fakturering">Leverantörer och fakturering</a></li><li><a href="nyheter.html">Nyheter och media</a></li>
       </ul></div>
     </nav>
   </div>
